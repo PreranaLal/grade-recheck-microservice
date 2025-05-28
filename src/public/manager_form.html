@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Grade Recheck Form Details</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <script>
+    async function loadForm() {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id');
+      const res = await fetch('/api/submissions/' + id);
+      if (!res.ok) {
+        document.getElementById('form-area').innerHTML = '<div class="alert alert-danger">Form not found.</div>';
+        return;
+      }
+      const entry = await res.json();
+      document.getElementById('studentId').value = entry.studentId;
+      document.getElementById('firstName').value = entry.firstName;
+      document.getElementById('lastName').value = entry.lastName;
+      document.getElementById('courseId').value = entry.courseId;
+      document.getElementById('reason').value = entry.reason;
+      document.getElementById('status').value = entry.status;
+      document.getElementById('updateForm').onsubmit = async function(e) {
+        e.preventDefault();
+        const status = document.getElementById('status').value;
+        const resp = await fetch('/api/submissions/' + id + '/status', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ status })
+        });
+        if (resp.ok) {
+          alert('Status updated!');
+          window.location.href = '/manager';
+        } else {
+          alert('Failed to update status.');
+        }
+      };
+    }
+    window.onload = loadForm;
+  </script>
+</head>
+<body class="bg-light">
+  <div class="container mt-5">
+    <div class="card shadow">
+      <div class="card-header bg-primary text-white">
+        <h3 class="mb-0">Grade Recheck Form (Read Only)</h3>
+      </div>
+      <div class="card-body" id="form-area">
+        <form id="updateForm">
+          <div class="mb-3">
+            <label class="form-label">Student ID</label>
+            <input type="text" class="form-control" id="studentId" readonly>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-control" id="firstName" readonly>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lastName" readonly>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Course ID</label>
+            <input type="text" class="form-control" id="courseId" readonly>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Reason for Change</label>
+            <textarea class="form-control" id="reason" rows="3" readonly></textarea>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Status</label>
+            <select class="form-select" id="status">
+              <option value="pending">Pending</option>
+              <option value="approved">Approve</option>
+              <option value="rejected">Reject</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-success">Update Form</button>
+        </form>
+      </div>
+    </div>
+    <div class="text-center mt-3">
+      <a href="/manager" class="btn btn-link">Back to Manager Table</a>
+    </div>
+  </div>
+</body>
+</html>

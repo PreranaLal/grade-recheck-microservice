@@ -1,0 +1,131 @@
+[
+  {
+    "id": 2,
+    "studentId": "S11323",
+    "firstName": "helo",
+    "lastName": "world",
+    "courseId": "CS221",
+    "reason": "patanahi",
+    "timestamp": "2025-05-19T04:31:41.757Z"
+  },
+  {
+    "id": 1747629526916,
+    "studentId": "S1",
+    "firstName": "h",
+    "lastName": "ll",
+    "courseId": "CS",
+    "reason": "hello",
+    "status": "rejected",
+    "createdAt": "2025-05-19T04:38:46.916Z"
+  },
+  {
+    "id": 1747630324555,
+    "studentId": "S11209632",
+    "firstName": "h",
+    "lastName": "e",
+    "courseId": "ee",
+    "reason": "helloto",
+    "status": "pending",
+    "createdAt": "2025-05-19T04:52:04.555Z"
+  },
+  {
+    "id": 1747630424846,
+    "studentId": "S11209632",
+    "firstName": "h",
+    "lastName": "e",
+    "courseId": "ee",
+    "reason": "helloto",
+    "status": "pending",
+    "createdAt": "2025-05-19T04:53:44.846Z"
+  },
+  {
+    "id": 1747630549849,
+    "studentId": "S11209632",
+    "firstName": "h",
+    "lastName": "e",
+    "courseId": "ee",
+    "reason": "helloto",
+    "status": "pending",
+    "createdAt": "2025-05-19T04:55:49.850Z"
+  },
+  {
+    "id": 1747630701146,
+    "studentId": "S11",
+    "firstName": "di",
+    "lastName": "ve",
+    "courseId": "ku",
+    "reason": "test",
+    "status": "pending",
+    "createdAt": "2025-05-19T04:58:21.146Z"
+  },
+  {
+    "id": 1747631055103,
+    "studentId": "S11209632",
+    "firstName": "hhe",
+    "lastName": "aa",
+    "courseId": "ss",
+    "reason": "plea",
+    "status": "pending",
+    "createdAt": "2025-05-19T05:04:15.103Z"
+  },
+  {
+    "id": 1747631158689,
+    "studentId": "S11209632",
+    "firstName": "hhe",
+    "lastName": "aa",
+    "courseId": "ss",
+    "reason": "plea",
+    "status": "pending",
+    "createdAt": "2025-05-19T05:05:58.689Z"
+  },
+  {
+    "id": 1747657455199,
+    "studentId": "S11209632",
+    "firstName": "hum",
+    "lastName": "hum",
+    "courseId": "ee",
+    "reason": "plue ",
+    "status": "pending",
+    "createdAt": "2025-05-19T12:24:15.199Z"
+  },
+  {
+    "id": 1748171029153,
+    "studentId": 3,
+    "firstName": "rourou",
+    "lastName": "bhaaji",
+    "courseId": "QR121",
+    "reason": "bekaar course hai",
+    "status": "pending",
+    "createdAt": "2025-05-25T11:03:49.153Z"
+  },
+  {
+    "id": 1748176809509,
+    "studentId": 3,
+    "firstName": "baba",
+    "lastName": "blacksheep",
+    "courseId": "wool22",
+    "reason": "mehmeh",
+    "status": "pending",
+    "createdAt": "2025-05-25T12:40:09.509Z"
+  },
+  {
+    "id": 1748179633585,
+    "studentId": 6,
+    "firstName": "jsao",
+    "lastName": "joudajn",
+    "courseId": "dans",
+    "reason": "kaksksk",
+    "status": "pending",
+    "createdAt": "2025-05-25T13:27:13.585Z"
+  },
+  {
+    "id": 1748179684782,
+    "studentId": "1",
+    "firstName": "gagao",
+    "lastName": "sai",
+    "courseId": "ajasboda",
+    "reason": "hehehe",
+    "status": "pending",
+    "createdAt": "2025-05-25T13:28:04.782Z"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "name": "grade-recheck-microservice",
+  "version": "1.0.0",
+  "description": "A microservice for grade recheck",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}
