@@ -16,7 +16,8 @@
     "courseId": "CS",
     "reason": "hello",
     "status": "rejected",
-    "createdAt": "2025-05-19T04:38:46.916Z"
+    "createdAt": "2025-05-19T04:38:46.916Z",
+    "rejectReason": "Too much jhoot bolo gang"
   },
   {
     "id": 1747630324555,
@@ -127,5 +128,16 @@
     "reason": "hehehe",
     "status": "pending",
     "createdAt": "2025-05-25T13:28:04.782Z"
+  },
+  {
+    "id": 1748664087499,
+    "studentId": 3,
+    "firstName": "John",
+    "lastName": "Doe",
+    "courseId": "UU114",
+    "reason": "I believe that I would have scored more marks and that it seems that Section A was completely skipped in total marks.",
+    "status": "pending",
+    "rejectReason": " ",
+    "createdAt": "2025-05-31T04:01:27.499Z"
   }
 ]

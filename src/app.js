@@ -34,12 +34,13 @@ app.post("/api/grade-recheck", (req, res) => {
   const db = loadDB();
   const newEntry = {
     id: Date.now(),
-    studentId,
+    studentId: String(studentId),
     firstName,
     lastName,
     courseId,
     reason,
     status: "pending",
+    rejectReason: " ",
     createdAt: new Date().toISOString(),
   };
   db.push(newEntry);
@@ -62,11 +63,16 @@ app.get("/api/submissions/:id", (req, res) => {
 
 // API: Update status (manager)
 app.post("/api/submissions/:id/status", (req, res) => {
-  const { status } = req.body;
+  const { status, rejectReason } = req.body;
   const db = loadDB();
   const idx = db.findIndex(e => String(e.id) === req.params.id);
   if (idx === -1) return res.status(404).json({ error: "Not found" });
   db[idx].status = status;
+  if (status === "rejected") {
+    db[idx].rejectReason = rejectReason || "";
+  } else {
+    db[idx].rejectReason = null;
+  }
   saveDB(db);
   res.json({ success: true });
 });
